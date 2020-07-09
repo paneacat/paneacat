@@ -1,15 +1,1310 @@
-<!doctype html>
-<html>
-  <head>
-    <title>My first webpage</title>
-    <style>
-      body {margin: 20%; font-family: sans-serif; font-size: 1.5em;}
-      h1 {letter-spacing: 0.05em;}
-      p {color: grey;}
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:Italian}it{/block:Italian}" class="no-js is-menu-fixed">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Title}{block:TagPage} — Posts Tagged: {Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:IndexPage}{block:Description} — {Description}{/block:Description}{/block:IndexPage}</title>
+    
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    
+    {block:PermalinkPage}
+    {block:Posts}
+    {block:Date}
+    <link rel="canonical" href="{Permalink}" />
+    <link rel="shortlink" href="{ShortURL}" />
+    {/block:Date}
+    {/block:Posts}
+    {/block:PermalinkPage}
+    
+    {block:IfCustomFaviconImage}
+    <link rel="shortcut icon" href="{image:Custom Favicon}" />
+    {/block:IfCustomFaviconImage}
+    {block:IfNotCustomFaviconImage}
+    <link rel="shortcut icon" href="{Favicon}" />
+    {/block:IfNotCustomFaviconImage}
+    
+    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    
+    {block:Hidden}
+    <meta name="select:Body Font" content="courier new" title="Courier"/>
+
+    <meta name="select:Heading Font" content="Helvetica Neue" title="Helvetica Neue"/>
+    
+    <meta name="select:Special Font" content="Shadows Into Light" title="Shadows Into Light"/>
+
+
+    <meta name="color:Body Bg" content="#ffffff" />
+    <meta name="color:Body Text" content="#585858" />
+    <meta name="color:Body Link" content="#ed804a" />
+    <meta name="color:Body Link Hover" content="#1f1f1f" />
+    <meta name="color:Selection Bg" content="#ffd800" />
+    <meta name="color:Selection Text" content="#000000" />        
+
+    <meta name="color:Logo Text" content="#333333" />
+    <meta name="color:Logo Text Hover" content="#333333" />
+    
+    <meta name="color:Post Title" content="#ffd800" />
+    <meta name="color:Post Title Hover" content="#777777" />
+    <meta name="color:Post Body" content="#505050" />
+    
+    
+    
+    <meta name="text:Instagram URL" content="#"/>
+
+    
+    <meta name="text:Search Title" content="Search For" />
+
+   
+        
+    <!-- THEME OPTIONS - NAVIGATIONS -->
+    <meta name="if:Home Link" content="1"/>
+    <meta name="if:Random Link" content="1"/>
+    <meta name="if:Archive Link" content="1"/>
+    <meta name="if:RSS Link" content="1"/>
+    
+    <!-- THEME OPTIONS - LOGO -->    
+    <meta name="image:Custom Favicon" content="" />
+    <meta name="image:Logo" content="http://static.tumblr.com/ihmgokx/xoCoootmt/logo.png" />
+
+    
+
+    <!-- THEME OPTIONS - FEATURED PHOTOS -->
+    <meta name="if:Show Featured Photos" content="1" />
+    <meta name="image:Featured Photo 1" content="http://static.tumblr.com/ihmgokx/vGzooqowf/featured-1.jpg" />
+    <meta name="image:Featured Photo 2" content="http://static.tumblr.com/ihmgokx/Whrooqows/featured-2.jpg" />
+    <meta name="image:Featured Photo 3" content="http://static.tumblr.com/ihmgokx/kdsooqox2/featured-3.jpg" />
+    <meta name="image:Featured Photo 4" content="http://static.tumblr.com/ihmgokx/n7Iooqoxe/featured-4.jpg" />
+
+    <meta name="text:Featured Photo 1 Text" content="#Travel" />
+    <meta name="text:Featured Photo 1 URL" content="#" />
+    <meta name="text:Featured Photo 2 Text" content="#Street Art" />
+    <meta name="text:Featured Photo 2 URL" content="#" />
+    <meta name="text:Featured Photo 3 Text" content="#Food" />
+    <meta name="text:Featured Photo 3 URL" content="#" />
+    <meta name="text:Featured Photo 4 Text" content="#Emotion" />
+    <meta name="text:Featured Photo 4 URL" content="#" />
+
+
+    <!-- THEME OPTIONS - WIDGET - ABOUT -->
+    <meta name="if:Show Widget About" content="1" />
+    <meta name="if:Show Widget About Title" content="1" />
+    <meta name="text:Widget About Title" content="About Me" />        
+    <meta name="text:Widget About Description" content="Hello. I am Eurus. I am a Tumblr theme. I make this platform better." />
+    <meta name="image:Widget About Avatar" content="http://static.tumblr.com/ihmgokx/hXToootme/avatar.jpg" />
+
+ 
+
+
+            
+    <!-- THEME OPTIONS - WIDGET - INSTAGRAM -->
+    <meta name="if:Show Widget Instagram" content="0" />
+    <meta name="if:Show Widget Instagram Title" content="1" />
+    <meta name="text:Widget Instagram Title" content="Instagram Feed" />
+    <meta name="text:Widget Instagram Id" content="" />
+    <meta name="text:Widget Instagram Token" content="" />
+    <meta name="text:Widget Instagram Limit" content="8" />
+    
+    <meta name="text:Footer Copyright" content="&copy; 2017 - Eurus by 9Pixel. All Right Reserved" />
+
+    <meta name="if:Enable Post Notes" content="1" />
+    <meta name="if:Enable Disqus Comment" content="0" />
+    <meta name="text:Disqus Comment Title" content="Leave A Reply" />
+    <meta name="text:Disqus Shortname" content="" />
+    {/block:Hidden}
+    
+
+    
+    <link href="https://fonts.googleapis.com/css?family={select:Body Font}:300,300i,400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family={select:Heading Font}:300,300i,400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family={select:Special Font}:300,300i,400,400i,700" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/jxso67azd/moment.min.js"></script>
+    <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>    
+
+    <style type="text/css">
+        /* COLORS */
+        body {
+            background-color: {color:Body Bg};
+            color: {color:Body Text};
+        }
+        ::-moz-selection {
+            display: inline-block;
+            background: {color:Selection Bg};
+            color: {color:Selection Text};
+        }
+        ::selection {
+            display: inline-block;
+            background: {color:Selection Bg};
+            color: {color:Selection Text};
+        }
+        a {
+            color: {color:Body Link};
+        }
+        a:hover {
+            color: {color:Body Link Hover};
+        }
+        .nav-menu ul li a:hover, 
+        .nav-menu ul li:hover > a, 
+        .nav-menu ul li a.selected{
+            color: {color:Body Link};
+        }
+
+        .entry-meta, .entry-meta .comment-link a, .entry-meta a{
+            color: #dad8d1;
+        }
+        .entry-meta .comment-link a:hover , .entry-meta a:hover{
+            color: {color:Body Link};
+        }
+        #back-to-top{
+            background: {color:Body Link};
+        }
+        #back-to-top i{
+            color: #fff;
+        }
+        #back-to-top:hover {
+            background: {color:Body Link Hover};
+        }
+        .navigation a{
+            color: #e9e6df;
+            border-color: #e9e6df;
+        }
+
+         .navigation a:hover {
+            color:{color:Body Link};
+            border-color:{color:Body Link};
+        }
+        .widget_categories ul li.cat-item a:hover{
+            color:{color:Body Link};
+        }        
+        .format-quote blockquote a{
+            color: #585858;
+        }
+        /* FONT */   
+        /*-------------------------------------------------------------
+        GENERAL - THEME OPTIONS
+        --------------------------------------------------------------*/
+        body,
+        input,
+        textarea,
+        select,
+        button,
+        .pi-sidebar-default input[type="submit"],
+        .pi-sidebar-default button,
+        .pi-content-post-standard .pi-post-body p.read_more_container a {
+            font-family: '{select:Body Font}', serif;
+        }
+
+  
+
+        /* POST TYPE - ANSWER */
+        .pi-post-type-answer ul li .post-answer-text {
+            border: 1px solid #d2d2d2;
+        }
+        .pi-post-type-answer ul li:nth-child(even) .post-answer-text {
+            background: #f9f9f9;
+        }
+        .pi-post-type-answer ul li .post-answer-user a {
+            color: #000000;
+        }
+        .pi-post-type-answer ul li .post-answer-user a:hover {
+            color: #000000;
+        }
+      
+        /* PERMALINK - POST NOTES */
+        .pi-permalink-notes ol li a {
+            color: {color:Body Link};
+        }
+        a.more_notes_link {
+            background: {color:Body Link};
+            color: #ffffff !important;
+        }
+        a.more_notes_link:hover {
+            background: {color:Body Link Hover};
+            color: #ffffff;
+        }
+        .pi-permalink-notes blockquote {
+            border: none;
+        }
+        .pi-permalink-notes ol li.reblog:after,
+        .pi-permalink-notes ol li.like:after {
+            color: #cccccc;
+        }
+                
+        /* HR */
+        .pi-content-post-standard .pi-post-body hr {
+            border-bottom: 1px dotted #bdbdbd;
+        }
+
+        /* PRE */
+        .pi-content-post-standard .pi-post-body pre {
+            background: #f9f9f9;
+        }
+
+        /* BLOCKQUOTE */
+        .pi-content-post-standard .pi-post-body blockquote {
+            border-left: 2px solid #eeeeee;
+        }
+
+        /* LINK */
+        .pi-content-post-standard .pi-post-body a {
+            color: #B76912;
+        }
+
+        .pi-content-post-standard .pi-post-body a:hover {
+            color: #B76912;
+        }
+
+        /* CODE */
+        .pi-content-post-standard .pi-post-body code {
+            background: #eeeeee;
+        }
+        
+        /* GENERAL */
+        .related-post-loader {
+            padding-top: 5px;
+        }        
+        .tumblr_video_container {
+            max-width: 100%;
+        }
+
     </style>
-  </head>
-  <body>
-    <h1>My first webpage</h1>
-    <p>I'm so smart</p>
-  </body>
+
+    <!-- page -->
+    <div id="page" class="hfeed site">
+        
+        <!-- header -->
+        <header id="masthead" class="site-header" role="banner">
+ 				
+                <!-- site-navigation -->
+                <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                    
+                    <a class="menu-toggle"><span class="lines"></span></a>
+                    
+                    <!-- nav-menu -->
+                    <div class="nav-menu">
+                        <ul>
+                            {block:ifHomeLink}<li><a href="{BlogUrl}">{lang:Home}</a></li>{block:ifHomeLink}
+                            {block:HasPages}
+                                {block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+                            {/block:HasPages}
+                            {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+                            {block:ifRandomLink}<li><a href="random">{lang:Random}</a></li>{/block:ifRandomLink}
+                            {block:ifArchiveLink}<li><a href="/archive">{lang:Archive}</a></li>{/block:ifArchiveLink}
+                            {block:ifRSSLink}<li><a href="{RSS}">{lang:RSS}</a></li>{/block:ifRSSLink}
+                        </ul>
+                    </div>
+                    <!-- nav-menu -->
+
+                    {block:IfShowSearch}
+                    <a class="search-toggle toggle-link"></a>
+                    {/block:IfShowSearch}
+                                        
+                    <!-- search-container -->
+                    <div class="search-container">
+                        
+                        <div class="search-box">
+                            <form method="get" class="search-form" action="/search">
+                                <label>{text:Search Title}
+                                    <input name="q" type="text" id="search-field" placeholder="{text:Search Placeholder}" value="{SearchQuery}">
+                                </label>
+                                <input type="submit" class="search-submit" value="Search">
+                            </form>
+                        </div>
+                    
+                    </div>
+                    <!-- search-container -->
+                    
+                    <!-- social-container -->
+                    <div class="social-container">
+                        
+                        <ul class="social">
+                            
+                            {block:IfInstagramURL}
+                            <li><a class="pi-instagram" href="{text:Instagram URL}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            {/block:IfInstagramURL}
+                            
+                        </ul>
+                      
+                        
+                    </div>
+                    <!-- social-container -->
+                    
+                </nav>
+                <!-- site-navigation -->
+                           
+               
+
+                {block:IfLogoImage}
+                 <!-- site-title -->
+                <h1 class="site-title">
+                    <a href="{BlogURL}">
+                        <img src="{image:Logo}" alt="{Title}" />                        
+                    </a>
+                </h1>
+                <!-- site-title -->
+                {/block:IfLogoImage}
+                
+                {block:IfNotLogoImage}
+                 <!-- site-title -->
+                <h1 class="site-title pi-logo-text">
+                    <a href="{BlogURL}">
+                        {Title}                        
+                    </a>
+                </h1>
+                <!-- site-title -->
+                {/block:IfNotLogoImage}
+                
+        </header>
+        <!-- header -->
+        
+        
+        
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+        
+        
+        	            
+            <!-- primary -->
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">    
+
+                    {block:IndexPage}
+                    {block:IfShowFeaturedPhotos}                                 
+                    <div class="intro layout-medium">
+                        <!-- .link-boxes -->
+                        <div class="figure-boxes">
+                            <div class="figure-box">
+                                <figure>
+                                    <a href="{text:Featured Photo 1 URL}" style="background-image: url({image:Featured Photo 1});"><img src="{image:Featured Photo 1}" alt="{text:Featured Photo 1 Text}">
+                                    </a>
+                                    <figcaption class="wp-caption-text">{text:Featured Photo 1 Text}</figcaption>
+                                    <a class="figure-link" href="{text:Featured Photo 1 URL}"></a>
+                                </figure>
+                            </div>
+                            <div class="figure-box">
+                                <figure>
+                                    <a href="{text:Featured Photo 2 URL}" style="background-image: url({image:Featured Photo 2});"><img src="{image:Featured Photo 2}" alt="{text:Featured Photo 2 Text}">
+                                    </a>
+                                    <figcaption class="wp-caption-text">{text:Featured Photo 2 Text}</figcaption>
+                                    <a class="figure-link" href="{text:Featured Photo 2 URL}"></a>
+                                </figure>
+                            </div>
+                            <div class="figure-box">
+                                <figure>
+                                    <a href="{text:Featured Photo 3 URL}" style="background-image: url({image:Featured Photo 3});"><img src="{image:Featured Photo 3}" alt="{text:Featured Photo 3 Text}">
+                                    </a>
+                                    <figcaption class="wp-caption-text">{text:Featured Photo 3 Text}</figcaption>
+                                    <a class="figure-link" href="{text:Featured Photo 3 URL}"></a>
+                                </figure>
+                            </div>
+                            <div class="figure-box">
+                                <figure>
+                                    <a href="{text:Featured Photo 4 URL}" style="background-image: url({image:Featured Photo 4});"><img src="{image:Featured Photo 4}" alt="{text:Featured Photo 4 Text}">
+                                    </a>
+                                    <figcaption class="wp-caption-text">{text:Featured Photo 4 Text}</figcaption>
+                                    <a class="figure-link" href="{text:Featured Photo 4 URL}"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- .link-boxes -->         
+                    </div>
+                    {/block:IfShowFeaturedPhotos}
+                    {/block:IndexPage}
+                    
+                    <!-- layout-fixed -->
+                	<div class="layout-fixed">
+                        {block:SearchPage}
+                        <!-- SEARCH -->
+                        <div class="pi-post-heading">Your search for <span>{SearchQuery}</span> returned <span>{SearchResultCount}</span> result(s).</div>
+                        <!-- SEARCH -->
+                        {/block:SearchPage}
+                        
+                        {block:TagPage}
+                        <!-- TAGS -->
+                        <div class="pi-post-heading">Posts Tagged <span>{Tag}</span></div>
+                        <!-- TAGS -->
+                        {/block:TagPage}
+                        
+                	       
+                        <!-- Blog Posts -->
+                        <div class="blog-regular">
+                    	    {block:Posts inlineMediaWidth="1280"}                    	
+                            <!-- Text Post -->
+                            {block:Text} 
+                            <article class="pi-entry post format-text">                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">
+
+                                    <!-- .entry-title -->
+                                    {block:Title}
+                                    {block:IndexPage}                                    
+                                    <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                                    {/block:IndexPage}
+                                    {block:PermalinkPage}
+                                    <h1 class="entry-title">{Title}</h1>
+                                    {/block:PermalinkPage}
+                                    {/block:Title}
+                                                                        
+                                    <!-- .entry-meta -->
+                                    {block:Date}
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                        	{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    {/block:Date}
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+                                                                                               
+                                <!-- .entry-content -->
+                                <div class="entry-content">
+                                	
+                                    {Body}
+                                   
+                                </div>
+                                <!-- .entry-content -->
+                                {block:Date}
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                           
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/block:Date}
+                                
+                            </article>
+                            {/block:Text}
+                            <!-- #Text Post -->
+
+                            <!-- Photo Post -->
+                            {block:Photo}
+                            <article class="pi-entry post format-photo">
+                                                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">                                    
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+                                
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                    {block:IndexPage}
+                                    <a href="{Permalink}"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></a>
+                                    {/block:IndexPage}
+                                    {block:PermalinkPage}
+                                    {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+                                    {/block:PermalinkPage}
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                <!-- .entry-content -->
+                                {block:Caption}
+                                <div class="entry-content">
+                                    {Caption}
+                                </div>
+                                {/block:Caption}                                
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                            
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Photo}
+                            <!-- #Photo Post -->
+
+                            <!-- Panorama Post -->
+                            {block:Panorama}
+                            <article class="pi-entry post format-panorama">
+                                                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">                                                
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+                                
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                    {LinkOpenTag}
+                                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                    {LinkCloseTag}
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                <!-- .entry-content -->
+                                {block:Caption}
+                                <div class="entry-content">
+                                    {Caption}
+                                </div>
+                                {/block:Caption}                                
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                        
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Panorama}
+                            <!-- #Panorama Post -->
+                            
+                            <!-- Photoset Post -->
+                            {block:Photoset}                                
+                            <article class="pi-entry post format-photoset">
+                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">
+                                                                        
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                    <div class="pi-post-image-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}" style="visibility: hidden;">
+                                        {block:Photos}
+                                            <img src="{PhotoURL-HighRes}" {block:Caption}title="{Caption}"{/block:Caption} {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes} />
+                                        {/block:Photos}
+                                    </div>
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                <!-- .entry-content -->  
+                                {block:Caption}
+                                <div class="entry-content">
+                                   {Caption}
+                                </div>
+                                {/block:Caption}
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                          
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Photoset}
+                            <!-- Photoset Post -->
+
+                            <!-- Quote Post -->
+                            {block:Quote}
+                            <article class="pi-entry post format-quote">
+                            
+                                <header class="entry-header">                                                                    
+                                    
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    
+                                </header>
+                                
+                                <div class="entry-content">
+
+                                    {block:IndexPage}
+                                    <blockquote>
+                                        <a href="{Permalink}">{Quote}</a>                                        
+                                        {block:Source}<a href="{Permalink}"><cite>{Source}</cite></a>{/block:Source}
+                                    </blockquote>
+                                    {/block:IndexPage}
+                                    
+                                    {block:PermalinkPage}
+                                    <blockquote>
+                                        {Quote}                                       
+                                        {block:Source}<cite>{Source}</cite>{/block:Source}
+                                    </blockquote>
+                                    {/block:PermalinkPage}
+                                                                                                            
+                                </div>
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                           
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Quote}
+                            <!-- Quote Post -->
+
+                            <!-- Link Post -->
+                            {block:Link}
+                            <article class="pi-entry post format-link">
+                            
+                                <header class="entry-header">                                    
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    
+                                    
+                                </header>
+                                
+                                
+                                <div class="entry-content">
+
+                                    {block:Thumbnail} <a href="{URL}" {target} class="link-thumb-link">
+                                    <img src="{Thumbnail-HighRes}" class="link-thumb"></a>
+                                    {/block:Thumbnail} 
+                                    
+                                    <div class="link-fix">
+                                         <h3><a href="{URL}">{Name}</a></h3>
+                                         <div class="link-description">                                          
+                                            <div class="link-exerpt">{Excerpt}</div>
+                                            {description}
+                                         </div>
+                                         
+                                         <a href="{URL}" class="visit" target="_blank">Visit this link →</a>
+                                    </div>
+
+                                </div>
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                          
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                                            
+                            </article>
+                            {/block:Link}
+                            <!-- Link Post -->
+
+                            <!-- Chat Post -->
+                            {block:Chat}
+                            <article class="pi-entry post format-chat">
+                            
+                                <header class="entry-header">
+                                    
+                                    
+                                    {block:Title}
+                                    {block:IndexPage}                                    
+                                    <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                                    {/block:IndexPage}
+                                    {block:PermalinkPage}
+                                    <h1 class="entry-title">{Title}</h1>
+                                    {/block:PermalinkPage}
+                                    {/block:Title}
+                                    
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    
+                                </header>
+                                
+                                
+                                <div class="entry-content">
+                                    
+                                    <div class="chat-transcript">
+                                        {block:Lines}                                        
+                                        <div class="chat-row chat-speaker-{Alt}">
+                                            {block:Label}<div class="chat-author"><cite class="fn">{Label}</cite></div>{/block:Label}
+                                            <div class="chat-text"><p>{Line}</p></div>
+                                        </div>                                        
+                                        {/block:Lines}                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                      
+
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Chat}
+                            <!-- Chat Post -->
+
+                            <!-- Audio Post -->
+                            {block:Audio}
+                            <article class="pi-entry post format-audio">
+                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">                                    
+                                    
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                   {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                <!-- .entry-content -->  
+                                {block:Caption}
+                                <div class="entry-content">
+                                    {Caption}                                    
+                                </div>
+                                {/block:Caption}
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+ 
+
+                                            <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Audio}
+                            <!-- Audio Post -->
+
+                            <!-- Video Post -->
+                            {block:Video}
+                            <article class="pi-entry post format-video">
+                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">
+                                                                        
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                 <!-- .entry-header -->
+
+                                 <!-- .featured-image -->
+                                <div class="featured-image">                                   
+                                   {VideoEmbed-700}
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                
+                                <!-- .entry-content -->  
+                                {block:Caption} 
+                                <div class="entry-content">
+                                    {Caption}
+                                </div>
+                                {/block:Caption}
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                     
+                                            <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Video}
+                            <!-- Video Post -->
+
+                            <!-- Answer Post -->
+                            {block:Answer}
+                            <article class="pi-entry post text-post format-answer">                            
+                                <!-- .entry-header -->
+                                <header class="entry-header">
+
+                                    <!-- .entry-meta -->
+                                    {block:Date}
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<time class="entry-date">{Month} {DayOfMonth}, {Year}</time>{block:IndexPage}</a>{/block:IndexPage}
+                                        </span> 
+                                        <span class="comment-link">{NoteCountWithLabel}</span> 
+                                        {block:HasTags}
+                                        <span class="cat-links pi-meta-tags">
+                                            {block:Tags}<a href="{TagURL}" rel="category tag">{Tag}</a>{/block:Tags}
+                                        </span>
+                                        {/block:HasTags}                                                                               
+                                    </div>
+                                    {/block:Date}
+                                    <!-- .entry-meta -->
+                                    
+                                </header>
+                                <!-- .entry-header -->
+                                                                                               
+                                <!-- .entry-content -->
+                                <div class="entry-content">
+                                    <div class="pi-post-type-answer">
+                                        <ul>
+                                            <li>
+                                                <div class="post-answer-image">
+                                                    <img src="{AskerPortraitURL-96}" alt="">
+                                                </div>
+                                                <div class="post-answer-text">
+                                                    <div class="post-answer-user">{Asker}</div>
+                                                    <div class="post-answer-message">{Question}</div>
+                                                </div>
+                                                <div class="pi-clear"></div>
+                                            </li>
+                                            {block:Answerer}
+                                            <li>
+                                                <div class="post-answer-image">
+                                                    <img src="{AnswererPortraitURL-96}" alt="">
+                                                </div>
+                                                <div class="post-answer-text">
+                                                    <div class="post-answer-user">{Answerer}</div>
+                                                    <div class="post-answer-message">{Answer}</div>
+                                                </div>
+                                                <div class="pi-clear"></div>
+                                            </li>
+                                            {/block:Answerer}
+                                        </ul>                                        
+                                    </div>      
+                                    <div class="pi-post-body">
+                                        {Replies}
+                                    </div>                             
+                                </div>
+                                <!-- .entry-content -->
+
+                                <div class="pi-post-share">
+                                    <div class="pi-content-post-standard">
+                                        <div class="pi-post-share-wrapper">
+                                                                     <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog likeit pi-tooltip" title="Like this">
+                                                {LikeButton color="grey" size="14"}
+                                            </div>
+                                            <div class="divider"></div>
+
+                                            <div class="like_and_reblog pi-tooltip" title="Reblog">
+                                                {ReblogButton color="grey" size="14"}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </article>
+                            {/block:Answer}
+                            <!-- #Answer Post -->
+                        {/block:Posts}                                                                                       
+                        </div>
+                        <!-- Blog Posts -->
+
+                        {block:PermalinkPage}
+                        {block:Posts}
+                        {block:Date}
+                        
+                        {block:IfEnablePostNotes}
+                        {block:PostNotes}
+                        <!-- PERMALINK - NOTES -->
+                        <div class="pi-permalink-other-wrapper">
+                            <div class="pi-permalink-other pi-post-notes">
+                                <div class="pi-permalink-other-title">{NoteCountWithLabel}</div>
+                                <div class="pi-permalink-notes">
+                                    {PostNotes}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PERMALINK - NOTES -->
+                        {/block:PostNotes}
+                        {/block:IfEnablePostNotes}
+                        
+                        {block:IfEnableDisqusComment}
+                        {block:IfDisqusShortname}
+                        <!-- PERMALINK - DISQUS -->
+                        <div class="pi-permalink-other-wrapper">
+                            <div class="pi-permalink-other">
+                                {block:IfDisqusCommentTitle}
+                                <div class="pi-permalink-other-title">{text:Disqus Comment Title}</div>
+                                {/block:IfDisqusCommentTitle}
+                                <div class="pi-permalink-disqus">
+                                    <script type="text/javascript">
+                                        var disqus_shortname = '{text:Disqus Shortname}';
+                                        var disqus_url = '{Permalink}';
+
+                                        (function() {
+                                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                        })();
+                                    </script>
+                                    <div id="disqus_thread"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PERMALINK - DISQUS -->
+                        {/block:IfDisqusShortname}
+                        {/block:IfEnableDisqusComment}
+                        
+                        {/block:Date}
+                        {/block:Posts}
+                        {/block:PermalinkPage}
+                        
+
+                        {block:Pagination}
+                        <nav class ="navigation" role="navigation">
+                            {block:NextPage}                                
+                                <div class="nav-next"><a href="{NextPage}">{lang:Next} <span class="meta-nav">→</span></a></div>                
+                            {/block:NextPage}
+                            {block:PreviousPage}                                
+                                <div class="nav-previous"><a href="{PreviousPage}"><span class="meta-nav">←</span> {lang:Previous}</a></div>
+                            {/block:PreviousPage}
+                            <div style="clear:both"></div>
+                        </div>
+                        {block:Pagination}
+
+                        {block:PermalinkPagination}
+                        <nav class ="navigation" role="navigation">
+                            {block:NextPost}                                
+                                <div class="nav-next"><a href="{NextPost}">Next Post <span class="meta-nav">→</span></a></div>                
+                            {/block:NextPost}
+                            {block:PreviousPost}                                
+                                <div class="nav-previous"><a href="{PreviousPost}"><span class="meta-nav">←</span> Previous Post</a></div>
+                            {/block:PreviousPost}
+                            <div style="clear:both"></div>
+                        </div>
+                        {/block:PermalinkPagination}
+                    
+                    </div>
+                    <!-- layout-fixed -->
+                                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        
+        
+        <!-- site-footer -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+			
+            <!-- layout-medium -->
+            <div class="layout-medium">
+            	
+                <!-- footer-social -->
+                <div class="footer-social">
+                	
+                    <ul class="social">
+                        {block:IfInstagramURL}
+                        <li><a class="pi-instagram" href="{text:Instagram URL}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        {/block:IfInstagramURL}
+                    </ul>
+                    
+                </div>
+                <!-- footer-social -->
+            	
+                <!-- footer-sidebar -->
+                <div class="footer-sidebar widget-area" role="complementary">
+
+
+                    <!-- widget --> 
+                    {block:IfShowWidgetInstagram}
+                    <aside class="widget widget-instagram">     
+                        {block:IfShowWidgetInstagramTitle}<h3 class="widget-title">{text:Widget Instagram Title}</h3>{/block:IfShowWidgetInstagramTitle}     
+                        <div class="pi-widget-body">
+                            <ul id="pi-widget-instagram-grid"></ul>
+                            <div class="pi-clear"></div>
+                        </div>
+                    </aside> 
+                    {/block:IfShowWidgetInstagram}
+                    <!-- widget --> 
+
+
+                   
+
+                </div>
+                <!-- footer-sidebar -->
+            
+            
+            </div>
+            <!-- layout-medium -->
+                
+                
+            <!-- .site-info -->
+            <div class="site-info">
+            	
+                <!-- layout-medium -->
+            	<div class="layout-medium">
+                
+            		<p>{text:Footer Copyright}</p>
+                
+                </div>
+            	<!-- layout-medium -->
+            
+            </div>
+            <!-- .site-info -->
+            
+            
+            
+		</footer>
+        <!-- site-footer -->
+
+        <!-- Back To Top -->
+        <a href="#" id="back-to-top" title="Back to top"><i class="fa fa-angle-double-up"></i></a>
+
+        
+	</div>
+    <!-- page -->
+    
+        
+
+    <!-- THEME - JS - LIBRARY -->
+    <script type="text/javascript" src="http://static.tumblr.com/hwysx1z/ULrmxj1vt/jquery.fitvids.js"></script>            
+    <
+
+    <!-- Back To Top -->
+    <script type="text/javascript">
+        if ($('#back-to-top').length) {
+        var scrollTrigger = 100, // px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+        $('#back-to-top').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+    }
+    </script>
+
+            });
+        }(jQuery));
+    </script>
+</body>
 </html>
