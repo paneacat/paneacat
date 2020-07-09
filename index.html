@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="{block:English}en{/block:English}{block:Italian}it{/block:Italian}" class="no-js is-menu-fixed">
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}" class="no-js is-menu-fixed">
 <head>
+
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,33 +31,135 @@
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     
     {block:Hidden}
+    <!-- GOOGLE FONTS -->
+    <meta name="select:Body Font" content="Droid Serif" title="Droid Serif"/>
+    <meta name="select:Body Font" content="Open Sans" title="Open Sans"/>
+    <meta name="select:Body Font" content="Lato" title="Lato"/> 
+    <meta name="select:Body Font" content="Crimson Text" title="Crimson Text"/>
+    <meta name="select:Body Font" content="PT Serif" title="PT Serif"/>
+    <meta name="select:Body Font" content="Noto Serif" title="Noto Serif"/>
+    <meta name="select:Body Font" content="Noto Sans" title="Noto Sans"/>   
+    <meta name="select:Body Font" content="Merriweather" title="Merriweather"/>
+    <meta name="select:Body Font" content="Exo" title="Exo"/>
+    <meta name="select:Body Font" content="Oswald" title="Oswald"/>    
+    <meta name="select:Body Font" content="Helvetica Neue" title="Helvetica Neue"/>
+    <meta name="select:Body Font" content="Abel" title="Abel"/>
+    <meta name="select:Body Font" content="Alegreya Sans" title="Alegreya Sans"/>    
     <meta name="select:Body Font" content="courier new" title="Courier"/>
-
-    <meta name="select:Heading Font" content="Helvetica Neue" title="Helvetica Neue"/>
+    <meta name="select:Body Font" content="Domine" title="Domine"/>
+    <meta name="select:Body Font" content="Droid Sans" title="Droid Sans"/>
+    <meta name="select:Body Font" content="Georgia" title="Georgia"/>
+    <meta name="select:Body Font" content="helvetica" title="Helvetica"/>
+    <meta name="select:Body Font" content="Karla" Title="Karla"/>
+    <meta name="select:Body Font" content="Mako" title="Mako"/>
+    <meta name="select:Body Font" content="Montserrat" title="Montserrat"/>    
+    <meta name="select:Body Font" content="PT Mono" title="PT Mono"/>
+    <meta name="select:Body Font" content="Raleway" title="Raleway"/>
+    <meta name="select:Body Font" content="Roboto" title="Roboto"/>
+    <meta name="select:Body Font" content="Roboto Slab" title="Roboto Slab"/>
+    <meta name="select:Body Font" content="Rokkitt" title="Rokkitt"/>
+    <meta name="select:Body Font" content="Ropa Sans" title="Ropa Sans"/>
+    <meta name="select:Body Font" content="Source Sans Pro" title="Source Sans Pro"/>    
+    <meta name="select:Body Font" content="Lobster Two" title="Lobster Two"/>
+    <meta name="select:Body Font" content="Playfair Display" title="Playfair Display"/>
+    <meta name="select:Body Font" content="Lora" title="Lora"/>
+    <meta name="select:Body Font" content="PT Sans" title="PT Sans"/>
+    <meta name="select:Body Font" content="Old Standard TT" title="Old Standard TT"/>
+    <meta name="select:Body Font" content="Poppins" title="Poppins"/>
     
+    <meta name="select:Heading Font" content="Open Sans" title="Open Sans"/>
+    <meta name="select:Heading Font" content="Playfair Display" title="Playfair Display"/>
+    <meta name="select:Heading Font" content="Crimson Text" title="Crimson Text"/>
+    <meta name="select:Heading Font" content="Lato" title="Lato"/>  
+    <meta name="select:Heading Font" content="PT Serif" title="PT Serif"/>
+    <meta name="select:Heading Font" content="Noto Serif" title="Noto Serif"/>
+    <meta name="select:Heading Font" content="Noto Sans" title="Noto Sans"/>
+    <meta name="select:Heading Font" content="Oswald" title="Oswald"/>
+    <meta name="select:Heading Font" content="Merriweather" title="Merriweather"/>
+    <meta name="select:Heading Font" content="Exo" title="Exo"/>
+    <meta name="select:Heading Font" content="Helvetica Neue" title="Helvetica Neue"/>
+    <meta name="select:Heading Font" content="Abel" title="Abel"/>
+    <meta name="select:Heading Font" content="Alegreya Sans" title="Alegreya Sans"/>    
+    <meta name="select:Heading Font" content="courier new" title="Courier"/>
+    <meta name="select:Heading Font" content="Domine" title="Domine"/>
+    <meta name="select:Heading Font" content="Droid Sans" title="Droid Sans"/>
+    <meta name="select:Heading Font" content="Georgia" title="Georgia"/>
+    <meta name="select:Heading Font" content="helvetica" title="Helvetica"/>
+    <meta name="select:Heading Font" content="Karla" Title="Karla"/>
+    <meta name="select:Heading Font" content="Mako" title="Mako"/>
+    <meta name="select:Heading Font" content="Montserrat" title="Montserrat"/>    
+    <meta name="select:Heading Font" content="PT Mono" title="PT Mono"/>
+    <meta name="select:Heading Font" content="Raleway" title="Raleway"/>
+    <meta name="select:Heading Font" content="Roboto" title="Roboto"/>
+    <meta name="select:Heading Font" content="Roboto Slab" title="Roboto Slab"/>
+    <meta name="select:Heading Font" content="Rokkitt" title="Rokkitt"/>
+    <meta name="select:Heading Font" content="Ropa Sans" title="Ropa Sans"/>
+    <meta name="select:Heading Font" content="Source Sans Pro" title="Source Sans Pro"/>    
+    <meta name="select:Heading Font" content="Lora" title="Lora"/>
+    <meta name="select:Heading Font" content="PT Sans" title="PT Sans"/>
+    <meta name="select:Heading Font" content="Old Standard TT" title="Old Standard TT"/>
+    <meta name="select:Heading Font" content="Poppins" title="Poppins"/>
+    
+    <meta name="select:Special Font" content="Merriweather" title="Merriweather"/>
+    <meta name="select:Special Font" content="Nothing You Could Do" title="Nothing You Could Do"/>
+    <meta name="select:Special Font" content="Indie Flower" title="Indie Flower"/>
     <meta name="select:Special Font" content="Shadows Into Light" title="Shadows Into Light"/>
+    <meta name="select:Special Font" content="Satisfy" title="Satisfy"/>
+    <meta name="select:Special Font" content="Kalam" title="Kalam"/>
+    <meta name="select:Special Font" content="Bad Script" title="Bad Script"/>
+    <meta name="select:Special Font" content="Reenie Beanie" title="Reenie Beanie"/>
+    <meta name="select:Special Font" content="Caveat" title="Caveat"/>
+    <meta name="select:Special Font" content="Waiting for the Sunrise" title="Waiting for the Sunrise"/>
+    <meta name="select:Special Font" content="La Belle Aurore" title="La Belle Aurore"/>
 
 
+
+    <!-- COLOR - THEME OPTIONS -->
     <meta name="color:Body Bg" content="#ffffff" />
     <meta name="color:Body Text" content="#585858" />
     <meta name="color:Body Link" content="#ed804a" />
     <meta name="color:Body Link Hover" content="#1f1f1f" />
-    <meta name="color:Selection Bg" content="#ffd800" />
+    <meta name="color:Selection Bg" content="#D2DEE6" />
     <meta name="color:Selection Text" content="#000000" />        
 
     <meta name="color:Logo Text" content="#333333" />
     <meta name="color:Logo Text Hover" content="#333333" />
     
-    <meta name="color:Post Title" content="#ffd800" />
+    <meta name="color:Post Title" content="#111111" />
     <meta name="color:Post Title Hover" content="#777777" />
     <meta name="color:Post Body" content="#505050" />
     
     
-    
+    <!-- THEME OPTIONS - SOCIAL MEDIA -->
+    <meta name="text:Facebook URL" content="#"/>
+    <meta name="text:Twitter URL" content="#"/>
     <meta name="text:Instagram URL" content="#"/>
+    <meta name="text:Flickr URL" content="#"/>
+    <meta name="text:Email" content="#"/>
+    <meta name="text:GitHub URL" content="#"/>
+    <meta name="text:Vimeo URL" content=""/>
+    <meta name="text:Dribbble URL" content=""/>
+    <meta name="text:Behance URL" content=""/>
+    <meta name="text:Skype Username" content=""/>
+    <meta name="text:Youtube URL" content=""/>
+    <meta name="text:Pinterest URL" content=""/>
+    <meta name="text:Deviantart URL" content=""/>
+    <meta name="text:Delicious URL" content=""/>
+    <meta name="text:Soundcloud URL" content=""/>
+    <meta name="text:Tumblr URL" content=""/>
+    <meta name="text:Google Plus URL" content=""/>
+    <meta name="text:Linkedin URL" content=""/>
+    <meta name="text:Foursquare URL" content=""/>
+    <meta name="text:500px URL" content=""/>
+    <meta name="text:Vine URL" content=""/>
+    <meta name="text:Medium URL" content=""/>
+    <meta name="text:Weibo URL" content=""/>
+    <meta name="text:Lastfm URL" content=""/>
 
-    
+    <!-- THEME OPTIONS - SEARCH -->  
+    <meta name="if:Show Search" content="1" />
     <meta name="text:Search Title" content="Search For" />
+    <meta name="text:Search Placeholder" content="Type and Press Enter..." />
 
    
         
@@ -71,6 +174,7 @@
     <meta name="image:Logo" content="http://static.tumblr.com/ihmgokx/xoCoootmt/logo.png" />
 
     
+    <!-- THEME OPTIONS - WIDGETS -->
 
     <!-- THEME OPTIONS - FEATURED PHOTOS -->
     <meta name="if:Show Featured Photos" content="1" />
@@ -96,8 +200,53 @@
     <meta name="text:Widget About Description" content="Hello. I am Eurus. I am a Tumblr theme. I make this platform better." />
     <meta name="image:Widget About Avatar" content="http://static.tumblr.com/ihmgokx/hXToootme/avatar.jpg" />
 
- 
+    <!-- THEME OPTIONS - WIDGET - LINKS -->
+    <meta name="if:Show Widget Links" content="1" />
+    <meta name="if:Show Widget Links Title" content="1" />
+    <meta name="text:Widget Links Title" content="Custom Link" />
+    <meta name="if:Show Widget Link 1" content="1" />
+    <meta name="if:Show Widget Link 2" content="1" />
+    <meta name="if:Show Widget Link 3" content="1" />
+    <meta name="if:Show Widget Link 4" content="1" />
+    <meta name="if:Show Widget Link 5" content="0" />
+    <meta name="if:Show Widget Link 6" content="0" />
+    <meta name="if:Show Widget Link 7" content="0" />
+    <meta name="if:Show Widget Link 8" content="0" />
+    <meta name="if:Show Widget Link 9" content="0" />
+    <meta name="if:Show Widget Link 10" content="0" />
+    <meta name="text:Widget Link 1 Text" content="Link 1" />
+    <meta name="text:Widget Link 1 URL" content="" />
+    <meta name="text:Widget Link 2 Text" content="Link 2" />
+    <meta name="text:Widget Link 2 URL" content="" />
+    <meta name="text:Widget Link 3 Text" content="Link 3" />
+    <meta name="text:Widget Link 3 URL" content="" />
+    <meta name="text:Widget Link 4 Text" content="Link 4" />
+    <meta name="text:Widget Link 4 URL" content="" />
+    <meta name="text:Widget Link 5 Text" content="Link 5" />
+    <meta name="text:Widget Link 5 URL" content="" />
+    <meta name="text:Widget Link 6 Text" content="Link 6" />
+    <meta name="text:Widget Link 6 URL" content="" />
+    <meta name="text:Widget Link 7 Text" content="Link 7" />
+    <meta name="text:Widget Link 7 URL" content="" />
+    <meta name="text:Widget Link 8 Text" content="Link 8" />
+    <meta name="text:Widget Link 8 URL" content="" />
+    <meta name="text:Widget Link 9 Text" content="Link 9" />
+    <meta name="text:Widget Link 9 URL" content="" />
+    <meta name="text:Widget Link 10 Text" content="Link 10" />
+    <meta name="text:Widget Link 10 URL" content="" />
 
+    <!-- THEME OPTIONS - WIDGET - TAG CLOUD -->
+    <meta name="if:Show Widget Tag Cloud" content="1" />
+    <meta name="if:Show Widget Tag Cloud Title" content="1" />
+    <meta name="text:Widget Tag Cloud Title" content="Tag Cloud" />
+    <meta name="text:Widget Tag Cloud Limit" content="12" />
+
+
+    <!-- THEME OPTIONS - WIDGET - TWITTER -->
+    <meta name="if:Show Widget Twitter" content="1" />
+    <meta name="if:Show Widget Twitter Title" content="1" />
+    <meta name="text:Widget Twitter Title" content="Twitter Widget" />
+    <meta name="text:Widget Twitter Limit" content="2" />
 
             
     <!-- THEME OPTIONS - WIDGET - INSTAGRAM -->
@@ -107,17 +256,51 @@
     <meta name="text:Widget Instagram Id" content="" />
     <meta name="text:Widget Instagram Token" content="" />
     <meta name="text:Widget Instagram Limit" content="8" />
+
+
+    <!-- THEME OPTIONS - WIDGET - FLICKR -->
+    <meta name="if:Show Widget Flickr" content="0" />
+    <meta name="if:Show Widget Flickr Title" content="1" />
+    <meta name="text:Widget Flickr Title" content="Flickr Feed" />    
+    <meta name="text:Widget Flickr Id" content="" />
+    <meta name="text:Widget Flickr Limit" content="8" />
+
+    <!-- THEME OPTIONS - WIDGET - DRIBBBLE -->
+    <meta name="if:Show Widget Dribbble" content="0" />    
+    <meta name="if:Show Widget Dribbble Title" content="1" />
+    <meta name="text:Widget Dribbble Title" content="Dribbble Feed" />    
+    <meta name="text:Widget Dribbble User" content="" />
+    <meta name="text:Widget Dribbble Token" content="" />
+    <meta name="text:Widget Dribbble Limit" content="8" />
+
     
+
+    <!-- THEME OPTIONS - WIDGET - EXTRA WIDGET -->
+    <meta name="if:Show Extra Widget" content="0" />
+    <meta name="if:Show Extra Widget Title" content="1" />
+    <meta name="image:Extra Widget" content="" />
+    <meta name="text:Extra Widget Title" content="Extra Widget" />
+    <meta name="text:Extra Widget HTML Code" content="" />
+
+
+    
+    <!-- THEME OPTIONS - FOOTER -->        
     <meta name="text:Footer Copyright" content="&copy; 2017 - Eurus by 9Pixel. All Right Reserved" />
 
+    
+       
+    <!-- THEME OPTIONS - PERMALINK -->   
     <meta name="if:Enable Post Notes" content="1" />
     <meta name="if:Enable Disqus Comment" content="0" />
     <meta name="text:Disqus Comment Title" content="Leave A Reply" />
     <meta name="text:Disqus Shortname" content="" />
+    
+    <!-- TEXT - ADDITIONAL OPTIONS -->        
+    <meta name="text:Google analytics ID" content="" />
     {/block:Hidden}
     
 
-    
+    <!-- THEME - GOOGLE FONTS -->        
     <link href="https://fonts.googleapis.com/css?family={select:Body Font}:300,300i,400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family={select:Heading Font}:300,300i,400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family={select:Special Font}:300,300i,400,400i,700" rel="stylesheet">
@@ -129,6 +312,33 @@
     
     <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/jxso67azd/moment.min.js"></script>
     <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>    
+    
+    
+    <!-- THEME - CSS - LIBRARY -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/qdu8dw9/AkFo67b33/lib-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/HFmoollgw/lib-elements.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/qdu8dw9/i6Po67b47/lib-animate.css" />    
+    <!-- THEME - CSS - PLUGINS -->    
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/jX5ooppa6/colorbox-custom.css" />    
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/qdu8dw9/Gyto67b75/tooltipster.css" />
+    <!-- THEME - CSS - STYLE -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/K91oopdr7/tumblr-styles.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/MUjoored1/style-posts.css" />
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/gi2oolljd/style-posts-typography.css" />
+    <!-- THEME - CSS - CUSTOMIZER -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/RaBoop1m3/customizer-colors.css" />    
+    <!-- THEME - CSS - RESPONSIVE -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/btNoollk7/style-responsive.css" />
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/Im9oo4iu8/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/Lekool73a/fontello.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/djjax95/AOkonmfwb/font-awesome.min.css">     
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/rW3op29qt/main.css">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ihmgokx/98qop09tm/theme-responsive.css">    
+    <!-- INITIAL SCRIPTS -->
+    <script src="http://static.tumblr.com/ihmgokx/VAhoo4j0s/jquery-1.11.1.min.js"></script>
+    <script src="http://static.tumblr.com/ihmgokx/HH2oo4j14/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://static.tumblr.com/gvsbfe2/oHlmp893l/modernizr-2.6.2.min.js"></script>
 
     <style type="text/css">
         /* COLORS */
@@ -203,7 +413,142 @@
             font-family: '{select:Body Font}', serif;
         }
 
+        /* HEADINGS */
+        h1, h2, h3, h4, h5, h6, 
+        .nav-menu, 
+        .entry-meta, 
+        .entry-header, 
+        .navigation, 
+        .pagination.navigation, 
+        tr th, 
+        dl dt, 
+        .header-links,
+        input[type=submit],
+        input[type=button],
+        button,
+        .button,
+        label,
+        .comment .reply,
+        .comment-meta,
+        .yarpp-thumbnail-title,
+        .tab-titles,
+        .skill-unit .bar .progress span,
+        .owl-theme .owl-nav [class*='owl-'],
+        .widget_categories ul li.cat-item a,
+        .intro .wp-caption-text {
+            font-family:'{select:Heading Font}', sans-serif;            
+            }
+    
+        .pi-content-post-standard .pi-post-type-quote-text {
+            font-family: '{select:Special Font}', serif;
+        }    
+
+        /*-------------------------------------------------------------
+        LOGO - THEME OPTIONS
+        --------------------------------------------------------------*/
+        
+        .pi-logo-text {
+            font-family: '{select:Special Font}', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+                
+        /*-------------------------------------------------------------
+        POST LAYOUTS - THEME OPTIONS
+        --------------------------------------------------------------*/
+        .pi-content-post-standard .pi-post .pi-post-header h2 {            
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 31px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pi-content-post-standard .pi-post-type-answer ul li .post-answer-message,
+        .pi-content-post-standard .pi-post-type-link-excerpt, 
+        .pi-content-post-standard .pi-post-type-chat ul li, 
+        .pi-content-post-standard .pi-post-body {
+            font-family: '{select:Special Font}', sans-serif;
+            font-size: 14px;
+            line-height: 27px;
+        }
   
+                
+        /* LOGO */
+        .pi-logo-text a{
+            color: {color:Logo Text};
+        }
+        .pi-logo-text a:hover{
+            color: {color:Logo Text Hover};
+        }      
+       
+        /* TWITTER FEED */
+        ul#pi-widget-twitter-feed{
+            margin: 0;
+        }
+        ul#pi-widget-twitter-feed li {
+            border-bottom: 1px dotted #cccccc;
+            list-style: none;
+        }
+        .tw-right a {
+            color: {color:Body Link};
+        }
+        .tw-right a:hover{
+            color: {color:Body Link Hover};
+        }
+        .tw-head span {
+            color: #aaaaaa;
+        }
+        .tw-text {
+            color: #444444;
+        }
+        .tw-btn a {
+            color: #cccccc;
+        }
+        .tw-btn a:hover {
+            color: #555555;
+        }        
+        
+        /* TITLE */
+        .pi-content-post-standard .pi-post .pi-post-header h2 a {
+            color: {color:Post Title};
+        }
+        .pi-content-post-standard .pi-post .pi-post-header h2 a:hover {
+            color: {color:Post Title Hover};
+        }
+
+        /* BODY */
+        .pi-post-body {
+            color: {color:Post Body};
+        }
+        .format-answer .pi-post-body{
+            margin-top: 20px;
+        }
+
+        /* POST SHARE */
+        .pi-content-post-standard .pi-post-share-wrapper{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .pi-content-post-standard .pi-post-share-body:before,
+        .pi-content-post-standard .pi-post-share-body:after {
+            border-bottom: 1px solid #d2d2d2;
+        }
+        .pi-content-post-standard .pi-post-share-wrapper .like_and_reblog, 
+        .pi-content-post-standard .pi-post-share-wrapper .post-share-icon {
+            background: #ffffff;
+            color: #aaaaaa;
+            border: 1px solid #9e9e9e;
+        }
+        .pi-content-post-standard .pi-post-share-wrapper .like_and_reblog:hover, 
+        .pi-content-post-standard .pi-post-share-wrapper .post-share-icon:hover {
+            background: #ffffff;
+            color: #aaaaaa;
+            border-color: {color:Body Link};
+        }
 
         /* POST TYPE - ANSWER */
         .pi-post-type-answer ul li .post-answer-text {
@@ -276,7 +621,17 @@
             max-width: 100%;
         }
 
-        <!-- page -->
+    </style>
+
+    <!-- THEME CUSTOM CSS -->
+    <style type="text/css">
+        {CustomCSS}
+    </style>
+    
+</head>
+
+<body class="{block:IndexPage}is-index is-home {block:DayPage}is-nothome{/block:DayPage} {block:Pagination}{block:PreviousPage}is-nothome {/block:PreviousPage}{/block:Pagination}{/block:IndexPage}{block:PermalinkPage}is-page {block:Posts}{block:Date}is-post {/block:Date}is-{PostType} {block:Audio}is-media {/block:Audio}{block:Video}is-media {/block:Video}{block:Photo}is-media {/block:Photo}{block:Photoset}is-photoset {block:Photoset}{block:RebloggedFrom}is-reblog {/block:RebloggedFrom}{block:NotReblog}is-notreblog {/block:NotReblog}{/block:Posts}{/block:PermalinkPage}{block:TagPage}is-tag is-nothome {/block:TagPage}{block:SearchPage}is-search is-nothome {/block:SearchPage}"> 
+    <!-- page -->
     <div id="page" class="hfeed site">
         
         <!-- header -->
@@ -932,7 +1287,17 @@
                                 <div class="pi-post-share">
                                     <div class="pi-content-post-standard">
                                         <div class="pi-post-share-wrapper">
- 
+                                            <a href="#" data-type="facebook" data-url="{Permalink}" class="prettySocial fa fa-facebook post-share-icon pi-tooltip" title="Share to Facebook"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="twitter" data-url="{Permalink}" class="prettySocial fa fa-twitter post-share-icon pi-tooltip" title="Share to Twitter"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="googleplus" data-url="{Permalink}" class="prettySocial fa fa-google post-share-icon pi-tooltip" title="Share to Google+"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="https://www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={URLEncodedPhotoURL-HighRes}&amp;description={URLEncodedTitle}" class="post-share-icon pi-tooltip" target="_blank" title="Share to Pinterest"><i class="fa fa-pinterest"></i></a>
+                                            <div class="divider"></div>
 
                                             <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
                                             <div class="divider"></div>
@@ -998,7 +1363,18 @@
                                 <div class="pi-post-share">
                                     <div class="pi-content-post-standard">
                                         <div class="pi-post-share-wrapper">
-                                     
+                                            <a href="#" data-type="facebook" data-url="{Permalink}" class="prettySocial fa fa-facebook post-share-icon pi-tooltip" title="Share to Facebook"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="twitter" data-url="{Permalink}" class="prettySocial fa fa-twitter post-share-icon pi-tooltip" title="Share to Twitter"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="googleplus" data-url="{Permalink}" class="prettySocial fa fa-google post-share-icon pi-tooltip" title="Share to Google+"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="https://www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={URLEncodedPhotoURL-HighRes}&amp;description={URLEncodedTitle}" class="post-share-icon pi-tooltip" target="_blank" title="Share to Pinterest"><i class="fa fa-pinterest"></i></a>
+                                            <div class="divider"></div>
+
                                             <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
                                             <div class="divider"></div>
 
@@ -1083,7 +1459,19 @@
                                 <div class="pi-post-share">
                                     <div class="pi-content-post-standard">
                                         <div class="pi-post-share-wrapper">
-                                                                     <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
+                                            <a href="#" data-type="facebook" data-url="{Permalink}" class="prettySocial fa fa-facebook post-share-icon pi-tooltip" title="Share to Facebook"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="twitter" data-url="{Permalink}" class="prettySocial fa fa-twitter post-share-icon pi-tooltip" title="Share to Twitter"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="googleplus" data-url="{Permalink}" class="prettySocial fa fa-google post-share-icon pi-tooltip" title="Share to Google+"></a>
+                                            <div class="divider"></div>
+
+                                            <a href="https://www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={URLEncodedPhotoURL-HighRes}&amp;description={URLEncodedTitle}" class="post-share-icon pi-tooltip" target="_blank" title="Share to Pinterest"><i class="fa fa-pinterest"></i></a>
+                                            <div class="divider"></div>
+
+                                            <a href="#" data-type="linkedin" data-url="{Permalink}" class="prettySocial fa fa-linkedin post-share-icon pi-tooltip" title="Share to LinkedIn"></a>
                                             <div class="divider"></div>
 
                                             <a href="{Permalink}" class="post-share-icon pi-tooltip" title="Permalink"><i class="fa fa-link"></i></a>
@@ -1274,7 +1662,44 @@
 
     <!-- THEME - JS - LIBRARY -->
     <script type="text/javascript" src="http://static.tumblr.com/hwysx1z/ULrmxj1vt/jquery.fitvids.js"></script>            
-    <
+    <script type="text/javascript" src="http://static.tumblr.com/ihmgokx/Th3oopg1j/main.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/ZdWo67ap5/lib-placeholder.js"></script>     
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/Q1do67av0/colorbox.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/515o67avd/tooltipster.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/vIZo67avq/imagesloaded.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/eGjo67aw6/instafeed.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/ihmgokx/rDqoopa63/jflickrfeed.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/djjax95/xw8omxrns/jribbble.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/IzFo67awm/prettysocial.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/qdu8dw9/nkVo67awq/photoset-grid.js"></script>
+
+    <script type="text/javascript">
+        // DRIBBBLE
+      {block:IfShowWidgetDribbble}
+      {block:IfWidgetDribbbleUser}      
+      $.jribbble.setToken('{block:IfWidgetDribbbleToken}{text:Widget Dribbble Token}{/block:IfWidgetDribbbleToken}{block:IfNotWidgetDribbbleToken}04c31b6c0758c3366899db5f59d78f4dbd5c01ecf63db6c6f2897eea33750286{/block:IfNotWidgetDribbbleToken}');
+
+        $.jribbble.users('{text:Widget Dribbble User}').shots({per_page: '{text:Widget Dribbble Limit}'}).then(function(shots) {
+        var html = [];        
+        shots.forEach(function(shot) {
+          html.push('<li class="shots--shot">');
+          html.push('<a class="cboxElement" href="' + shot.images.hidpi + '">');
+          html.push('<img src="' + shot.images.normal + '">');
+          html.push('</a></li>');
+        });
+        
+        $('#pi-widget-dribbble-grid').html(html.join(''));
+        $('#pi-widget-dribbble-grid a').colorbox({          
+          photo: true,
+          scalePhotos: true,
+          maxHeight:'100%',
+          maxWidth:'100%'
+      });
+      });
+      {/block:IfWidgetDribbbleUser} 
+      {/block:IfShowWidgetDribbble}  
+
+    </script>
 
     <!-- Back To Top -->
     <script type="text/javascript">
@@ -1301,6 +1726,64 @@
     }
     </script>
 
+    <!-- THEME - JS - CONFIGURATION -->
+    <script type="text/javascript">
+        var api_url = '{BlogURL}';
+        
+        // Our API key V2 for Public
+        var api_key = 'Zly4oSkq5pOTH91SjFucHHceHRU0W9sEEOVlumTGgkA7y0R5FS';                
+        
+        // TAG CLOUD
+        var api_tag_cloud_limit = {text:Widget Tag Cloud Limit};
+                
+        
+        {block:IfWidgetInstagramId}
+        var instagram_userid = parseInt('{text:Widget Instagram Id}');
+        {/block:IfWidgetInstagramId}
+        
+        {block:IfWidgetInstagramToken}
+        var instagram_tokenid = '{text:Widget Instagram Token}';
+        {/block:IfWidgetInstagramToken}
+            
+        var instagram_limit = {text:Widget Instagram Limit};
+        
+      
+        
+       </script>
+
+    <!-- THEME - JS - FUNCTIONS -->
+    <script type="text/javascript" src="http://static.tumblr.com/ihmgokx/MF1oor4ta/tumblr-functions.js"></script>
+   
+    <!-- THEME - JS - INITIALIZATION -->
+    <script type="text/javascript">
+        (function($){
+            "use strict";
+            
+            $(document).ready(function(){                                                                                        
+                themeApp.theme_pretty_social();
+                themeApp.theme_tooltip();
+                themeApp.theme_fitvids();                
+                themeApp.theme_soundcloud();
+
+                // Post Image Gallery and Grid                
+                themeApp.theme_post_image_grid();
+
+                {block:IfShowWidgetInstagram}
+                    // Instagram Grid
+                    themeApp.theme_instagram_grid();
+                {/block:IfShowWidgetInstagram}
+                
+
+                {block:IfShowWidgetFlickr}
+                    // Flickr Grid
+                    themeApp.theme_flickr_grid();
+                {/block:IfShowWidgetFlickr}
+
+                {block:IfShowWidgetTagCloud}
+                    // Tag Cloud
+                    themeApp.theme_api_tagcloud();
+                {/block:IfShowWidgetTagCloud}
+               
             });
         }(jQuery));
     </script>
