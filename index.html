@@ -1,82 +1,55 @@
 <!DOCTYPE html>
-<html lang="{block:English}en{/block:English}{block:Italian}it{/block:Italian}class="no-js is-menu-fixed">
-<head>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{Title}{block:TagPage} — Posts Tagged: {Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:IndexPage}{block:Description} — {Description}{/block:Description}{/block:IndexPage}</title>
-    
-    {block:Description}
-    <meta name="description" content="{MetaDescription}" />
-    {/block:Description}
-    
-    {block:PermalinkPage}
-    {block:Posts}
-    {block:Date}
-    <link rel="canonical" href="{Permalink}" />
-    <link rel="shortlink" href="{ShortURL}" />
-    {/block:Date}
-    {/block:Posts}
-    {/block:PermalinkPage}
-    
-    {block:IfCustomFaviconImage}
-    <link rel="shortcut icon" href="{image:Custom Favicon}" />
-    {/block:IfCustomFaviconImage}
-    {block:IfNotCustomFaviconImage}
-    <link rel="shortcut icon" href="{Favicon}" />
-    {/block:IfNotCustomFaviconImage}
-    
-    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
-    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
-    
-    {block:Hidden}
-    <meta name="select:Body Font" content="courier new" title="Courier"/>
-
-    <meta name="select:Heading Font" content="Helvetica Neue" title="Helvetica Neue"/>
-    
-    <meta name="select:Special Font" content="Shadows Into Light" title="Shadows Into Light"/>
-
-
+    <meta name="select:Body Font" content="Helvetica Neue" title="Helvetica Neue"/>
+   
     <meta name="color:Body Bg" content="#ffffff" />
     <meta name="color:Body Text" content="#585858" />
     <meta name="color:Body Link" content="#ed804a" />
     <meta name="color:Body Link Hover" content="#1f1f1f" />
-    <meta name="color:Selection Bg" content="#ffd800" />
+    <meta name="color:Selection Bg" content="#D2DEE6" />
     <meta name="color:Selection Text" content="#000000" />        
 
     <meta name="color:Logo Text" content="#333333" />
     <meta name="color:Logo Text Hover" content="#333333" />
     
-    <meta name="color:Post Title" content="#ffd800" />
+    <meta name="color:Post Title" content="#111111" />
     <meta name="color:Post Title Hover" content="#777777" />
     <meta name="color:Post Body" content="#505050" />
     
     
-    
-    <meta name="text:Instagram URL" content="#"/>
-
-    
-    <meta name="text:Search Title" content="Search For" />
-
-   
-        
-    <!-- THEME OPTIONS - NAVIGATIONS -->
+    <meta name="text:Search Placeholder" content="Type and Press Enter..." />
     <meta name="if:Home Link" content="1"/>
-    <meta name="if:Random Link" content="1"/>
-    <meta name="if:Archive Link" content="1"/>
-    <meta name="if:RSS Link" content="1"/>
+    <meta name="if:About Link" content="1"/>
+    <meta name="if:Recensioni Link" content="1"/>
     
-    <!-- THEME OPTIONS - LOGO -->    
-    <meta name="image:Custom Favicon" content="" />
-    <meta name="image:Logo" content="http://static.tumblr.com/ihmgokx/xoCoootmt/logo.png" />
+    
+    <img src="img/banner.jpg" alt="paneacult"/>
 
+    <meta name="if:Show Featured Photos" content="1" />
+  
+    <meta name="image:Featured Photo 1" content="http://static.tumblr.com/ihmgokx/Whrooqows/featured-2.jpg" />
+    <meta name="image:Featured Photo 2" content="http://static.tumblr.com/ihmgokx/kdsooqox2/featured-3.jpg" />
+   
+   
+    <meta name="text:Featured Photo 1 Text" content="#Street Art" />
+    <meta name="text:Featured Photo 1 URL" content="#" />
+    <meta name="text:Featured Photo 2 Text" content="#Food" />
+    <meta name="text:Featured Photo 2 URL" content="#" />
+   
+
+  
+
+            
     <!-- THEME OPTIONS - WIDGET - INSTAGRAM -->
     <meta name="if:Show Widget Instagram" content="0" />
     <meta name="if:Show Widget Instagram Title" content="1" />
     <meta name="text:Widget Instagram Title" content="Instagram Feed" />
-                                
-                            
+    <meta name="text:Widget Instagram Id" content="" />
+    <meta name="text:Widget Instagram Token" content="" />
+    <meta name="text:Widget Instagram Limit" content="8" />
 
-  </script>
+
+	</div>
+  
 </body>
 </html>
